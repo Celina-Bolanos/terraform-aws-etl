@@ -14,6 +14,7 @@ If you would like to try this pipeline out, please note you need the following p
 
 - AWS account and credentials (aws_secret_key and aws_secrect_access_key)
 - AWS key-pair on your local machine (to avoid downloading the private key each time you want to try this out.)
+- Free API from openweathermap.org
 
 Software:
 - aws CLI
@@ -26,7 +27,7 @@ Software:
 
     1. Clone this repository: ``` git clone https://github.com/Celina-Bolanos/terraform-aws-etl.git ``` 
     2. On main.tf, look for  "resource "aws_instance" "weather_api" and replace the "key-pair" parameter value with the name of your own key-pair's name.
-    3. On python_utils/etl.py, enter your API from openweathermap.org. You may create one if you don't have one now.
+    3. On python_utils/etl.py, enter your API from openweathermap.org.
     4. On your termnal, cd to the cloned repository directory.
     5. Sign in to aws ```aws configure``` 
     6. Run ``` terraform init ``` to iniciate terraform on that directory.
